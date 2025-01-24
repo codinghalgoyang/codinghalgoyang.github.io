@@ -52,3 +52,7 @@ author: # 저자 설정
 		  url: "https://github.com/codinghalgoyang"
 timezone: JP, AU
 ```
+
+#### favicon 수정 방법
+
+참고 : https://danggai.github.io/github.io/Github.io-%ED%8C%8C%EB%B9%84%EC%BD%98-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0/
