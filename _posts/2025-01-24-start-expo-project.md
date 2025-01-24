@@ -21,5 +21,6 @@ expo init 프로젝트명
 ```
 npm run start
 # 또는
-expo start
+~~expo start~~ # 그냥 expo start를 하면, 예전 expo-cli가 실행되는듯함.
+npx expo start
 ```
