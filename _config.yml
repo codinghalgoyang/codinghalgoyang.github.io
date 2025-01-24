@@ -27,6 +27,7 @@ baseurl: # the subpath of your site, e.g. "/blog"
 repository: "https://github.com/codinghalgoyang/codinghalgoyang.github.io"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: "/assets/images/small-logo-transparent.png"
+favicon: "/assets/images/favicon-96x96.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs: # true, false (default)
 words_per_minute: 200
