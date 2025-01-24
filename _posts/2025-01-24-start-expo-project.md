@@ -20,7 +20,8 @@ expo init 프로젝트명
 
 ```
 npm run start
+
 # 또는
-~~expo start~~ # 그냥 expo start를 하면, 예전 expo-cli가 실행되는듯함.
-npx expo start
+
+npx expo start # 그냥 expo start를 하면, 버전 확인하라는 문구가 발생하는 듯. (npx expo 랑 그냥 expo와 버전차이가 있는 듯함.)
 ```
