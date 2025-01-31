@@ -33,6 +33,7 @@ npx create-expo-app@latest
 > expo router 3.5.x 버전 이상 지원
 
 `.ios.tsx, .web.tsx, .native.tsx` 파일등을 지원
+
 ```
 - app
 	- _layout.tsx
@@ -43,9 +44,11 @@ npx create-expo-app@latest
 ```
 
 #### 동적 라우팅
+
 - `app/blog/[slug].tsx` 는 `/blog/{slug}` 경로
 
 router paramter 사용방법
+
 ```tsx
 import { useLocalSearchParams } from 'expo-router';
 import { Text } from 'react-native';
@@ -64,6 +67,7 @@ export default function Page() {
 `Link`를 사용하여 페이지 이동 (web의 `a` 태그와 `href` 속성과 유사함.)
 
 페이지 구조
+
 ```
 - app
 	- index.tsx
@@ -90,6 +94,7 @@ export default function Page() {
 ```
 
 버튼 형태로 `Link` 사용하기
+
 - `asChild` prop을 사용하여 자식 컴포넌트를 포워딩함.
 
 ```tsx
@@ -110,6 +115,7 @@ export default function Page() {
 #### Route
 
 Link 사용
+
 ```tsx
 <Link push href="/login">Login</Link> // push가 default 임
 <Link replace href="/login">Login</Link>
@@ -121,9 +127,8 @@ Link 사용
 }}>View user</Link>
 ```
 
-
-
 router 사용
+
 ```tsx
 import { router } from 'expo-router';
 
@@ -160,6 +165,7 @@ native UI 컴포넌트를 사용할 수 있음.
 Stack Navigation : 앱에서 경로 간 탐색을 위한 기본적인 방법
 - android에서는 stack 된 경로가 현재 화면 위에 애니메이션으로 나타남
 - ios 에서는 스택된 경로가 오른쪽에서 애니메이션으로 나타남
+
 ```tsx
 import { Stack } from 'expo-router';
 
