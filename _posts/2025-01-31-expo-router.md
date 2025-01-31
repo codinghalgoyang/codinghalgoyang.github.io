@@ -172,3 +172,4 @@ export default function HomeLayout() {
 
 #### 참고자료
 - https://docs.expo.dev/router/create-pages/
+- https://onemask514.tistory.com/43
