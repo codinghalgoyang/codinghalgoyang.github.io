@@ -132,5 +132,43 @@ router.push('/login');
 router.back();
 ```
 
+#### Layout routes
+
+
+> 네이티브 앱에서는 사용자들이 헤더와 탭 바와 같은 공유 요소가 페이지간 지속되길 바람. 라우트간 이동은 애니메이션 없이 전체 페이지 전환이 이루어짐. 이런건 Layout Route를 사용해 사용자 경험을 높일 수 있도록 해야함
+
+- 파일 이름은 `_layout.tsx` 으로 생성함
+- 각 위치에 `_layout.tsx`를 생성하면 됨
+
+#### Group
+
+- URL segments 없이 레이아웃을 추가하려면그룹 syntax인 `()`를 사용
+- app의 section을 구분하는데도 좋음
+
+예
+- `app/root/home.tsx` > `/root/home`
+- `app/(root)/home.tsx` > `/home`
+
+
+#### Native Layouts
+
+native UI 컴포넌트를 사용할 수 있음.
+- 성능면에서 좋음
+- 각 플랫폼에 맞는 UX 제공할 수 있음
+- 플랫폼 특화기능(ios 내비게인션바 or Android drawer) 쉽게 구현
+
+Stack Navigation : 앱에서 경로 간 탐색을 위한 기본적인 방법
+- android에서는 stack 된 경로가 현재 화면 위에 애니메이션으로 나타남
+- ios 에서는 스택된 경로가 오른쪽에서 애니메이션으로 나타남
+```tsx
+import { Stack } from 'expo-router';
+
+export default function HomeLayout() {
+  return (
+    <Stack screenOptions={{ ... }} />
+  );
+}
+```
+
 #### 참고자료
 - https://docs.expo.dev/router/create-pages/
