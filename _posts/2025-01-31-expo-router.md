@@ -116,15 +116,13 @@ export default function Page() {
 
 Link 사용
 
-```
+```tsx
 <Link push href="/login">Login</Link> // push가 default 임
 <Link replace href="/login">Login</Link>
 
 // params 활용
-// 아래 부분에서 tsx 문법 적용시 Liquid Exception이 발생하여 일단 tsx 문법 처리하지 않도록 변경함.
-// Liquid Exception: Liquid syntax error (line 120): Variable '{{ pathname: '/user/[id]', params: { id: 'bacon' }' was not properly terminated with regexp: /\}\}/ in /github/workspace/_posts/2025-01-31-expo-router.md
 <Link
-  href={{ pathname: '/user/[id]', params: { id: 'bacon' }}}>
+  href={{ pathname: '/user/id', params: { id: 'bacon' }}}>
   View user
 </Link>
 ```
