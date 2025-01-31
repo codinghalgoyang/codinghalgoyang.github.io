@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "[expo] splash screen 사용하기"
+published : false
 ---
 
 #### expo-splash-screen 설치
