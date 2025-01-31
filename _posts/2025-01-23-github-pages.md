@@ -20,6 +20,7 @@ title: "github pages 생성 및 관리"
 ___
 layout: single
 title: ‘첫 포스팅’
+published : false # 이건 포스팅 비공개시에 사용
 ___
 
 내용작성
