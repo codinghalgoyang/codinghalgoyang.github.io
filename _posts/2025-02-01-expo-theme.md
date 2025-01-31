@@ -4,6 +4,7 @@ title: "[expo] theme 코드 분석"
 ---
 
 `npx create-expo-app@latest` 사용시 Theme 관련 코드가 자동 생성되는데 해당 내용을 분석해보자.
+** 프로젝트 리셋(`npm run reset-project`) 이후, `app-examples` 폴더로 들어가는 부분**
 
 `app/_layout.tsx`
 ```tsx
