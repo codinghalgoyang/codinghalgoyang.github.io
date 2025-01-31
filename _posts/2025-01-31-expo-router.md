@@ -120,7 +120,14 @@ Link 사용
 <Link push href="/login">Login</Link> // push가 default 임
 <Link replace href="/login">Login</Link>
 
-
+// params 활용
+<Link
+  href={{
+    pathname: '/user/[id]',
+    params: { id: 'bacon' }
+  }}>
+  View user
+</Link>
 ```
 
 router 사용
