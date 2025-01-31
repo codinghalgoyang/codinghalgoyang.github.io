@@ -11,10 +11,9 @@ npm install --global expo-cli
 
 #### 프로젝트 생성
 
-```
-~~expo init 프로젝트명~~
-~~> blank (TypeScript) 선택해서 진행함.~~
+`expo init 프로젝트명`으로 시작하는 방법도 있지만, 아래 명령어를 사용하면 expo-router, 기본 폴더 구조등이 잘 잡혀있음.
 
+```
 npx create-expo-app@latest # expo-router, 폴더 구조등 기본 설정이 되어있음
 ```
 
