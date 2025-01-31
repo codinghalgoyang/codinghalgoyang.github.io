@@ -17,6 +17,16 @@ npm install --global expo-cli
 npx create-expo-app@latest # expo-router, 폴더 구조등 기본 설정이 되어있음
 ```
 
+#### 프로젝트 Reset
+
+```
+npm run reset-project
+```
+
+> 위 명령어를 실행하면, 기존 코드는 app-exmaple 폴더 내에 들어가고, 새로운 app 폴더와 _layout.tsx, index.tsx가 만들어짐.
+
+기존 상태에서는 새로운 화면을 추가하려고 할 때나 splash 화면을 변경할 때, 작동이 잘 안되는 부분이 있었는데, 다시 작동이 잘되는지 확인해봐야할듯!
+
 #### 프로젝트 실행
 
 ```
