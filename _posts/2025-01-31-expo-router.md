@@ -121,6 +121,7 @@ Link 사용
 <Link replace href="/login">Login</Link>
 
 // params 활용
+// pathname 에는 /user/[id] 가 들어가야하나, markdown에서 블로그 글로 변경하면서 syntax 에러가 발생해 아래 부분에서는 []를 제외함. 실제로는 [] 필요!
 <Link
   href={{ pathname: '/user/id', params: { id: 'bacon' }}}>
   View user
