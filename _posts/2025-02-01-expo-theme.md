@@ -31,7 +31,7 @@ export default function RootLayout() {
 }
 ```
 
-DefaultTheme.tsx
+DefaultTheme.tsx (from @react-navigation/native)
 ```tsx
 import type { Theme } from '../types';
 import { fonts } from './fonts';
@@ -50,13 +50,5 @@ export const DefaultTheme: Theme = {
 };
 ```
 
-HomeScreen 코드 중 일부
-```tsx
-<ThemedView style={styles.titleContainer}>
-  <ThemedText type="title">Welcome!</ThemedText>
-</ThemedView>
-```
-
 - `app/_layout.tsx`에서 ThemeProvider로 하위 컴포넌트들에서 Theme을 사용할 수 있도록 함.
 - `ThemeProvider`는 `DarkTheme` 또는 `DefaultTheme`을 사용하는데, 이는 `Theme 타입`의 변수임.
-- 하위 컴포넌트(예. HomeScreen)에서는 적용된 Theme을 쉽게 사용하기 위해서 `<ThemedView>`나 `<ThemedText>`를 사용함.
