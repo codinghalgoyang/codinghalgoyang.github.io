@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "[expo] theme 코드 분석"
+published: false
 ---
 
 `npx create-expo-app@latest` 사용시 Theme 관련 코드가 자동 생성되는데 해당 내용을 분석해보자.
