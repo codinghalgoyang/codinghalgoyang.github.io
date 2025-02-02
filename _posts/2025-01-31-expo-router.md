@@ -177,39 +177,7 @@ export default function HomeLayout() {
 }
 ```
 
-#### `npx create-expo-app@latest`의 기본 구조 다시 보기
-
-폴더구조
-```
-- app
-  - (tabs)
-    - _layout.tsx
-    - explore.tsx
-    - index.tsx
-  - _layout.tsx
-  - +not-found.tsx
-```
-
-`app/_layout.tsx`
-```tsx
-export default function RootLayout() {
-  ...
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
-  );
-}
-```
-
-- app 바로 밑에는 _layout.tsx와 screen이 위치함.
-- 여기서 screen은 (tabs) 그룹과 +not-found.tsx 임.
-- `<Stack>`의 가장 밑에는 +not-found screen이 위치함.
-- 그 위에 `(tabs)` screen이 존재함.
+#### `npx create-ex함
 
 #### 참고자료
 - https://docs.expo.dev/router/create-pages/
