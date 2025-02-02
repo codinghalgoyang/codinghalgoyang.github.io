@@ -177,7 +177,37 @@ export default function HomeLayout() {
 }
 ```
 
-#### `npx create-ex함
+#### `npx create-expo-app`시 expo-router가 기본설치되는데 해당 내용 분석
+
+폴더구조
+
+```
+- app
+  - _layout.tsx
+  - +not-found.tsx
+  - (tabs)
+    - _layout.tsx
+    - index.tsx
+    - home.tsx
+  - 
+```
+
+`app/_layout.tsx`
+
+```tsx
+export default function RootLayout() {
+  ...
+  return (
+    <Stack>
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="+not-found" />
+     </Stack>
+  );
+}
+```
+
+- Stack 안에는 Stack 에서 사용할 screen들을 명시해놓는듯함. (진짜 Stack에 들어간 것은 아니고, 나중에 쓰기위해 정의만 해놓은 것임)
+- `(tabs)`는 그룹이므로, 앱 실행시 가장 처음 실행되는 경로인 "/"와 매칭되는 것은 `app/(tabs)/index.tsx`가 됨.
 
 #### 참고자료
 - https://docs.expo.dev/router/create-pages/
