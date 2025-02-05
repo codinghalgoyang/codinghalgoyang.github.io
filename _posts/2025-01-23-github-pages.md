@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "github pages 생성 및 관리"
+categories: github-pages
 ---
 
 #### 생성방법

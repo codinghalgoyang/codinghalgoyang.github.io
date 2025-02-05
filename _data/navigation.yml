@@ -10,3 +10,39 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+# nav for docs(categories)
+category_nav:
+  - title: etc
+    children:
+      - title: "github pages"
+        url: /category/github-pages
+  #   - title: "css"
+  #     url: "/categories/css"
+  #   - title: "javascript"
+  #     url: "/categories/javascript"
+  #   - title: "react"
+  #     url: "/categories/react"
+  # - title: "web domain knowledge"
+  #     url: "/categories/web-domain-knowledge"
+
+  # - title: "application"
+  # children:
+  #   - title: "expo"
+  #     url: "/categories/expo"
+  #   - title: "electron"
+  #     url: "/categories/electron"
+
+  # - title: "etc"
+  # children:
+  #   - title: "minimal mistakes"
+  #     url: "/categories/minimal-mistakes"
+  #   - title: "tools"
+  #     url: "/categories/tools"
+
+  # - title: "personal"
+  # children:
+  #   - title: "english"
+  #     url: "/categories/english"
+  #   - title: "life"
+  #     url: "/categories/life"
