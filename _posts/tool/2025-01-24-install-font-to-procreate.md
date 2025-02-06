@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "아이패드 Procreate 폰트 설치"
+title: "[tool] 아이패드 Procreate 폰트 설치"
 categories: tool
 ---
 

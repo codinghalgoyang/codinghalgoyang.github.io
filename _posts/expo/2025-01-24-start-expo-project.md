@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "expo 프로젝트 시작하기"
+title: "[expo] 프로젝트 시작하기"
 categories: expo
 ---
 

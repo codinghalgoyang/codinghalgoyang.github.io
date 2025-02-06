@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[Web] 관계형 데이터 베이스 관련 내용 정리"
+title: "[web-domain-knowledge] 관계형 데이터 베이스 관련 내용 정리"
 categories: web-domain-knowledge
 ---
 

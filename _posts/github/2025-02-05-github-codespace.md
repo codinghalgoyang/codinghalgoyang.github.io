@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "github codespace 사용법"
+title: "[github] codespace 사용법"
 categories: github
 ---
 

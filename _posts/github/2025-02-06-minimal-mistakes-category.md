@@ -1,10 +1,11 @@
 ---
 layout: single
-title: "[minimal mistakes] category navigation 사용하기"
+title: "[github/minimal-mistakes] category navigation 사용하기"
 categories: github/minimal-mistakes
 ---
 
 #### 구조
+
 - 사이드바 : 페이지 왼쪽에 위치한 부분
 - 네비게이션 : 사이드바 아래쪽에 위치한 부분으로 누르면 특정 url (예. /test)로 이동
 - 카테고리 페이지 : 네비게이션 각 링크를 눌렀을 때 나오는 페이지로, 해당 카테고리를 가지고 있는 글을 묶어서 보여주는 역할
@@ -29,7 +30,7 @@ permalink: /category/github-pages
 - `title: “Github Pages 관련 글 모음”`은 해당 페이지에서 보여지는 title을 정의
 - `layout: archive` 는 해당 페이지가 다른 페이지를 묶어서 요약하는 페이지의 레이아웃인 archive를 사용하겠다는 의미
 - `permalink: /category/github-pages`은 해당 페이지의 url임.
-	- `/github-pages` 처럼 `category`를 안 붙여도 상관없으나,  카테고리 관련 페이지들을 `/category` 안에 두고 싶어서 이렇게 작성함.
+  - `/github-pages` 처럼 `category`를 안 붙여도 상관없으나, 카테고리 관련 페이지들을 `/category` 안에 두고 싶어서 이렇게 작성함.
 
 > permalink와 나중에 navigation의 url이 일치해야함.
 
@@ -37,6 +38,7 @@ permalink: /category/github-pages
 
 - `assign posts = site.categories.github-pages` : 포스트한 페이지 중 `categories`가 `github-pages`인 애들을 `posts`라는 변수에 넣은 것
 - `include archive-single.html type=page.entries_layout` : 위에서 변수 `posts`를 하나씩 순회해가면서 `archive-single.html` 형태(제목, 내용)로 페이지 내용을 생성하는 부분
+
 ```
 
 > archive-single.html 대신 다른걸 쓰면 다른 형태로 페이지 내용을 생성도 가능할듯.
@@ -48,17 +50,14 @@ permalink: /category/github-pages
 `_data/navigation.yml`
 
 ```
-category_nav:
-	- title: etc
-	children:
-		- title: "github pages"
-		  url: /category/github-pages
-		- title: "tools"
-		  url: /category/tools
-	- title: web
-	children:
-		- title: "javascript"
-		  url: /category/javascript
+
+category_nav: - title: etc
+children: - title: "github pages"
+url: /category/github-pages - title: "tools"
+url: /category/tools - title: web
+children: - title: "javascript"
+url: /category/javascript
+
 ```
 
 - category_nav : 변수명
@@ -72,33 +71,40 @@ category_nav:
 위에서 만든 nav 변수를 필요한 곳에 sidebar에 등록 해줘야함.
 
 ```
+
 ---
+
 sidebar:
-	nav: category_nav
+nav: category_nav
+
 ---
+
 ```
 
 위의 내용이 들어가야할 곳.
 1. index.html : 가장 처음에 나오는 페이지, `---` 안에 넣어주면 됨.
-2. 각 포스트의 `---`안에 또는 `_config.yml`의 `defaults/values` 안에!(각 포스트의 기본 값을 설정하는 부분) 
+2. 각 포스트의 `---`안에 또는 `_config.yml`의 `defaults/values` 안에!(각 포스트의 기본 값을 설정하는 부분)
 
 `_config.yml` : 각 posts에 기본 값에 sidebar: nav: category_nav를 넣겠다는 의미
 
 ```
-defalults:
-	# _posts
-	values:
-		sidebar:
-			nav: category_nav
+
+defalults: # \_posts
+values:
+sidebar:
+nav: category_nav
+
 ```
 
 #### Step 4. 각 포스트별 categories 등록
 
 포스팅시 머릿말에 categories 추가
 ```
+
 ---
-categories: github-pages
----
+
+## categories: github-pages
+
 ```
 
 > _posts 아래 카테고리별로 포스트를 나누어써도 괜찮나? 아마 OK? 대신 따로 연결되거나 하는 부분은 없고, 이걸 하려면 코드를 수정하는 방법도 있긴한듯.
@@ -122,3 +128,4 @@ categories: github-pages
 
 - [Navigation category commit](https://github.com/codinghalgoyang/codinghalgoyang.github.io/commit/ca1ef8a9b074130cdfa97dcf7f75bd07d6610b92)
 
+```

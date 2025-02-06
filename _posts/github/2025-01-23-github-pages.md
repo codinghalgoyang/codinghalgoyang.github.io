@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[github pages] minimal mistakes theme으로 github pages 시작하기"
+title: "[github/github-pages] minimal mistakes theme으로 github pages 시작하기"
 categories: github/github-pages
 ---
 

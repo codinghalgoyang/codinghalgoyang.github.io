@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[github pages] markdown 코드 블록안에 내용이 build가 안되거나 이상하게 해석될 때 (feat. liquid 구문)"
+title: "[github/github-pages] markdown 코드 블록안에 내용이 build가 안되거나 이상하게 해석될 때 (feat. liquid 구문)"
 categories: github/github-pages
 ---
 

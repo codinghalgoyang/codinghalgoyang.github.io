@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[expo] TypeError: Invalid character in header content"
+title: "[expo/troubleshooting] TypeError: Invalid character in header content"
 categories: expo/troubleshooting
 ---
 
