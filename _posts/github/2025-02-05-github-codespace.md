@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "github codespace 사용법"
+categories: github
 ---
 
 github codespace를 사용하면, vscode + github 환경을 웹브라우저에서 실행시킬 수 있음.
