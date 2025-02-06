@@ -15,8 +15,8 @@ main:
 category_nav:
   - title: etc
     children:
-      - title: "github pages"
-        url: /category/github-pages
+      - title: "github"
+        url: /category/github
   #   - title: "css"
   #     url: "/categories/css"
   #   - title: "javascript"

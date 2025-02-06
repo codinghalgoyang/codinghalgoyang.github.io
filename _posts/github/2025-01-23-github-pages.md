@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "github pages 생성 및 관리"
-categories: github-pages
+title: "[github pages] minimal mistakes theme으로 github pages 시작하기"
+categories: github
 ---
 
 #### 생성방법
