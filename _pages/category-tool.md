@@ -7,4 +7,4 @@ permalink: /category/tool
 #### tool
 
 {% assign posts = site.posts | where: "categories", "tool" %}
-{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+{% for post in posts %} {% include archive-single-custom.html type=page.entries_layout %} {% endfor %}
