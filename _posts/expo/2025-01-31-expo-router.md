@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "[expo] expo-router 정리"
-categories: mobile-app/expo
+categories: expo
 ---
 
 파일 기반 라우터 expo-router 사용하기
@@ -51,8 +51,8 @@ npx create-expo-app@latest
 router paramter 사용방법
 
 ```tsx
-import { useLocalSearchParams } from 'expo-router';
-import { Text } from 'react-native';
+import { useLocalSearchParams } from "expo-router";
+import { Text } from "react-native";
 
 export default function Page() {
   const { slug } = useLocalSearchParams();
@@ -80,8 +80,8 @@ export default function Page() {
 `app/index.tsx`
 
 ```tsx
-import { View } from 'react-native';
-import { Link } from 'expo-router';
+import { View } from "react-native";
+import { Link } from "expo-router";
 
 export default function Page() {
   return (
@@ -99,8 +99,8 @@ export default function Page() {
 - `asChild` prop을 사용하여 자식 컴포넌트를 포워딩함.
 
 ```tsx
-import { Pressable, Text } from 'react-native';
-import { Link } from 'expo-router';
+import { Pressable, Text } from "react-native";
+import { Link } from "expo-router";
 
 export default function Page() {
   return (
@@ -132,15 +132,14 @@ Link 사용
 router 사용
 
 ```tsx
-import { router } from 'expo-router';
+import { router } from "expo-router";
 
-router.replace('/login');
-router.push('/login');
+router.replace("/login");
+router.push("/login");
 router.back();
 ```
 
 #### Layout routes
-
 
 > 네이티브 앱에서는 사용자들이 헤더와 탭 바와 같은 공유 요소가 페이지간 지속되길 바람. 라우트간 이동은 애니메이션 없이 전체 페이지 전환이 이루어짐. 이런건 Layout Route를 사용해 사용자 경험을 높일 수 있도록 해야함
 
@@ -153,18 +152,20 @@ router.back();
 - app의 section을 구분하는데도 좋음
 
 예
+
 - `app/root/home.tsx` > `/root/home`
 - `app/(root)/home.tsx` > `/home`
-
 
 #### Native Layouts
 
 native UI 컴포넌트를 사용할 수 있음.
+
 - 성능면에서 좋음
 - 각 플랫폼에 맞는 UX 제공할 수 있음
 - 플랫폼 특화기능(ios 내비게인션바 or Android drawer) 쉽게 구현
 
 Stack Navigation : 앱에서 경로 간 탐색을 위한 기본적인 방법
+
 - android에서는 stack 된 경로가 현재 화면 위에 애니메이션으로 나타남
 - ios 에서는 스택된 경로가 오른쪽에서 애니메이션으로 나타남
 
@@ -190,7 +191,7 @@ export default function HomeLayout() {
     - _layout.tsx
     - index.tsx
     - home.tsx
-  - 
+  -
 ```
 
 `app/_layout.tsx`
@@ -211,5 +212,6 @@ export default function RootLayout() {
 - `(tabs)`는 그룹이므로, 앱 실행시 가장 처음 실행되는 경로인 "/"와 매칭되는 것은 `app/(tabs)/index.tsx`가 됨.
 
 #### 참고자료
+
 - https://docs.expo.dev/router/create-pages/
 - https://onemask514.tistory.com/43

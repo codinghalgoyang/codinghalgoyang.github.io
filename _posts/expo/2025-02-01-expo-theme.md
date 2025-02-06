@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "[expo] theme 코드 분석"
-categories: mobile-app/expo
+categories: expo
 published: false
 ---
 
@@ -10,6 +10,7 @@ published: false
 > 프로젝트 리셋(`npm run reset-project`) 이후, `app-examples` 폴더로 들어가는 부분
 
 `app/_layout.tsx`
+
 ```tsx
 import {
   DarkTheme,
@@ -33,19 +34,20 @@ export default function RootLayout() {
 ```
 
 DefaultTheme.tsx (from @react-navigation/native)
+
 ```tsx
-import type { Theme } from '../types';
-import { fonts } from './fonts';
+import type { Theme } from "../types";
+import { fonts } from "./fonts";
 
 export const DefaultTheme: Theme = {
   dark: false,
   colors: {
-    primary: 'rgb(0, 122, 255)',
-    background: 'rgb(242, 242, 242)',
-    card: 'rgb(255, 255, 255)',
-    text: 'rgb(28, 28, 30)',
-    border: 'rgb(216, 216, 216)',
-    notification: 'rgb(255, 59, 48)',
+    primary: "rgb(0, 122, 255)",
+    background: "rgb(242, 242, 242)",
+    card: "rgb(255, 255, 255)",
+    text: "rgb(28, 28, 30)",
+    border: "rgb(216, 216, 216)",
+    notification: "rgb(255, 59, 48)",
   },
   fonts,
 };

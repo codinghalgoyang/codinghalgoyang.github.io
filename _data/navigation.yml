@@ -13,13 +13,10 @@ main:
 
 # nav for docs(categories)
 category_nav:
-
   - title: app
     children:
-    - title: "windows app"
-      url: /category/windows-app
-    - title: "mobile app"
-      url: /category/mobile-app
+      - title: "expo"
+        url: /category/expo
 
   - title: etc
     children:

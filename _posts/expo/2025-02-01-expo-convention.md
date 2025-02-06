@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "[expo] 파일 및 폴더 명명 convention"
-categories: mobile-app/expo
+categories: expo
 ---
 
 - 파일 및 폴더이름 : 소문자와 (-)하이픈을 사용. 예) `user-profile.tsx`

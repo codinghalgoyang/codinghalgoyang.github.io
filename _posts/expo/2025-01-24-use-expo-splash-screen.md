@@ -1,8 +1,8 @@
 ---
 layout: single
 title: "[expo] splash screen 사용하기"
-published : false
-categories: mobile-app/expo
+published: false
+categories: expo
 ---
 
 #### expo-splash-screen 설치
@@ -59,4 +59,5 @@ export default function App() {
 ```
 
 #### 일단 실패
+
 -> 3초는 적용이 되는데, expo go에서 이미지가 변경되지 않는 현상이 발생함.
