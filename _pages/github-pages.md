@@ -4,5 +4,10 @@ layout: archive
 permalink: /category/github
 ---
 
-{% assign posts = site.categories.github %}
+#### github-pages
+{% assign posts = site.posts | where: "categories", "github/github-pages" %}
+{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+
+#### minimal-mistakes
+{% assign posts = site.posts | where: "categories", "github/minimal-mistakes" %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
