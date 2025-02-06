@@ -1,9 +1,11 @@
 ---
 layout: single
-title: "배우고 싶은 것 정리"
+title: "[etc] 배우고 싶은 것 정리"
+categories: etc
 ---
 
 #### web
+
 - javascript
 - typescript
 - html
@@ -12,10 +14,12 @@ title: "배우고 싶은 것 정리"
 - domain knowledge
 
 #### app
+
 - expo
 - electron
 
 #### etc
+
 - github.io
 - gstreamer
 - ros2
@@ -24,6 +28,7 @@ title: "배우고 싶은 것 정리"
 - tool
 
 #### 개인
+
 - 영어
 - 카메라
 - 요리
