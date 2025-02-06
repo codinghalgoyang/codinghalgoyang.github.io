@@ -2,6 +2,7 @@
 layout: single
 title: "[expo] splash screen 사용하기"
 published : false
+categories: mobile-app/expo
 ---
 
 #### expo-splash-screen 설치

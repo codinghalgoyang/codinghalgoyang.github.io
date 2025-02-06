@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "expo 프로젝트 시작하기"
+categories: mobile-app/expo
 ---
 
 #### expo-cli 설치

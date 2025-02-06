@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "[expo] theme 코드 분석"
+categories: mobile-app/expo
 published: false
 ---
 

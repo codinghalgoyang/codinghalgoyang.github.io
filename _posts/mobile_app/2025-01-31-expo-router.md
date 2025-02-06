@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "[expo] expo-router 정리"
+categories: mobile-app/expo
 ---
 
 파일 기반 라우터 expo-router 사용하기
