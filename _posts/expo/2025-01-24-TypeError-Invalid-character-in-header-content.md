@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "[expo] TypeError: Invalid character in header content"
+categories: expo/troubleshooting
 ---
 
 expo에서 `npm run start` 이후, expo go 앱으로 접속했을 때,
