@@ -13,6 +13,11 @@ main:
 
 # nav for docs(categories)
 category_nav:
+  - title: web
+    children:
+      - title: "web domain knowledge"
+        url: /category/web-domain-knowledge
+
   - title: app
     children:
       - title: "expo"
