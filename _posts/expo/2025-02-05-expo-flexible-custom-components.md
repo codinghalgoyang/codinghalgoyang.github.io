@@ -10,10 +10,11 @@ categories: expo
 import { Colors } from "@/contants/Colors";
 import { StyleSheet, View, ViewStyle } from "react-native";
 
-type ContainerProps = {
+interface ContainerProps extends React.ComponentProps<typeof View> {
+  // 이 부분은 아래 컴포넌트에 따라 바뀜
   children: React.ReactNode;
   style?: ViewStyle; // 이 부분은 아래 컴포넌트에 따라 바뀜
-} & React.ComponentProps<typeof View>; // 이 부분은 아래 컴포넌트에 따라 바뀜
+}
 
 export default function Container({
   children,
