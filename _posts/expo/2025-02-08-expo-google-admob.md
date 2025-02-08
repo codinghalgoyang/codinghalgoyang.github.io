@@ -1,3 +1,9 @@
+---
+layout: single
+title: "[expo] google admob"
+categories: expo
+---
+
 예전에는 expo 앱에서 expo-ads-admob 라이브러리를 쓸 수 있었지만, Expo SDK 46 부터 지원하지 않는다고 함.
 
 react-native-google-mobile-ads 사용!
