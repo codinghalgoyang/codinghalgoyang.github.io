@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[tool] 아이패드 Procreate 폰트 설치"
-categories: tool
+title: "[etc] 아이패드 Procreate 폰트 설치"
+categories: etc
 ---
 
 1. 아이패드에서 폰트 다운로드
