@@ -24,8 +24,6 @@ category_nav:
     children:
       - title: "github"
         url: /category/github
-      - title: "tool"
-        url: /category/tool
       - title: "etc"
         url: /category/etc
 
