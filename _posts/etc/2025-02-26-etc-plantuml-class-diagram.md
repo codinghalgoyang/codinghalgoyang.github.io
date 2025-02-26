@@ -10,6 +10,7 @@ categories: etc
 - plant uml : text를 기반으로 uml 그릴 수 있음.
     - vscode plantuml 익스텐션 활용
     - java, graphviz 가 설치되어 있어야함.
+    - .puml 확장자를 사용함.
 
 ## PlantUML 클래스 다이어그램
 
