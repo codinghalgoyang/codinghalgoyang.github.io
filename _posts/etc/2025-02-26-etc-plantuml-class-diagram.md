@@ -19,20 +19,22 @@ categories: etc
 #### 간단 예제
 ```
 @startuml
-class Car {
-	- String brand
-	- String model
-    - Car car
-	+ void start()
-	+ void stop()
-}
+package Group1 {
+	class Car {
+		- String brand
+		- String model
+		- Car car
+		+ void start()
+		+ void stop()
+	}
 
-class Engine {
-	- int horsepower
-	- int cylinders
-	+ void start()
-	+ void stop()
-	+ void drive(Car car)
+	class Engine {
+		- int horsepower
+		- int cylinders
+		+ void start()
+		+ void stop()
+		+ void drive(Car car)
+	}
 }
 
 Engine --* Car : contains in
@@ -136,6 +138,14 @@ It's possible to use few HTML tags.
 end note
 ```
 
+#### package
 
+> 그룹을 표시할 때 사용
+
+```
+package 패키지명 {
+	// 패키지 안에 내용
+}
+```
 
 
