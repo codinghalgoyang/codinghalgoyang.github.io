@@ -4,7 +4,7 @@ title: "[expo] eas 환경변수 내용 정리"
 categories: expo
 ---
 
-## 결론
+#### 결론
 
 - 내가 local에 환경변수를 굳이 가지고 있을 필요가 없음.
 - 환경변수는 `development, production` 두 가지로 구분하자. (preview까지는 굳이 하지 않아도 될듯)

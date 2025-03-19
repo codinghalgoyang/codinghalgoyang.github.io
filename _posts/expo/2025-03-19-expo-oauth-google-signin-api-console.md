@@ -4,7 +4,7 @@ title: "[expo] Oauth, google signin, sha-1, google api console 내용 정리"
 categories: expo
 ---
 
-## 결론
+#### 결론
 
 - expo, eas를 사용해 빌드 및 배포 과정에 필요한 sha-1키를 얻는다(eas credentials)
 - firebase에 해당 sha-1키를 등록한다.(프로젝트>앱설정)
