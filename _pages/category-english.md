@@ -4,6 +4,12 @@ layout: archive
 permalink: /category/english
 ---
 
+#### 왕초보영어
+
+{% assign posts = site.posts | where: "categories", "english/english-beginner" %}
+{% for post in posts %} {% include archive-single-custom.html type=page.entries_layout %} {% endfor %}
+
+
 #### 영어적 사고
 
 {% assign posts = site.posts | where: "categories", "english/english-thinking" %}
