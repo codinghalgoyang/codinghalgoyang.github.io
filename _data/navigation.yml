@@ -17,6 +17,8 @@ category_nav:
     children:
       - title: "web domain knowledge"
         url: /category/web-domain-knowledge
+      - title: "web programming"
+        url: /category/web-programming
       - title: "expo"
         url: /category/expo
 
