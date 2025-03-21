@@ -4,6 +4,13 @@ title: "[expo] development & production 환경 분리 내용 정리"
 categories: expo
 ---
 
+## 결론
+
+- development, preview, production을 모두 사용한다.
+- development는 expo의 developmentClient를 위한 것
+- preview는 app의 테스트 환경(DB등)을 사용하기 위해 development와 환경변수를 모두 공유한다.
+- production은 따로 환경을 사용한다.
+
 #### EAS credentials (development/production 구분 & android/ios 구분 필요)
 
 - 빌드 및 배포 과정에 필요한 sha-1 를 eas credentials를 사용해 생성 가능
