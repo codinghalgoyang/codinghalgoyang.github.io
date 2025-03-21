@@ -146,7 +146,7 @@ eas.json
 {
   "build": {
     "development": {
-      "developmentClient": true // 이거 여부에 따라 expo development로 빌드될듯
+      "developmentClient": true // 이거 여부에 따라 expo development로 빌드될듯 -> 빌드 안됨
     }
   }
 }
