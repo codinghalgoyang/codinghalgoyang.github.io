@@ -137,3 +137,17 @@ eas env:create --scope project --environment production --type string --visibili
 eas build --profile development --platform android
 eas build --profile production --platform android
 ```
+
+#### development 환경변수 사용하면서 expo production으로 빌드하기
+
+eas.json
+
+```json
+{
+  "build": {
+    "development": {
+      "developmentClient": true // 이거 여부에 따라 expo development로 빌드될듯
+    }
+  }
+}
+```
