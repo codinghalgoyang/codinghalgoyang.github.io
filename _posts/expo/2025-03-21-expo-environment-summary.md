@@ -1,0 +1,130 @@
+---
+layout: single
+title: "[expo] development & production 환경 분리 내용 정리"
+categories: expo
+---
+
+#### EAS credentials (development/production 구분 & android/ios 구분 필요)
+
+- 빌드 및 배포 과정에 필요한 sha-1 를 eas credentials를 사용해 생성 가능
+- eas credentials는 development / production 및 android / ios 를 구분하여 총 4개를 생성
+- 각 생성된 SHA-1 finger print를 firebase development / production 프로젝트의 android / ios에 각각 넣어준다
+- 아마 새로 google service json, plist 파일 받는게 필요해보임.
+
+```bash
+eas credentials
+# android / ios 선택
+# development / production 선택
+# 일단 확인해보니 android의 development와 production은 같은 sha-1을 뱉는다.
+# 일단 같아도 크게 상관은 없으니 진행한다. (그래도 둘다 해줘야 eas 환경에 development, production 모두에 대한 sha-1 이 들어갈듯)
+```
+
+파일을 다운로드 후, 업로드를 해준다. (이미 환경변수가 있을 경우, 명령어 입력후 Overwrite가 띄면 Y 선택 )
+
+```bash
+# GOOGLE_SERVICES_JSON : {firebase > development | production 프로젝트 > 프로젝트설정 > Android 앱 > google-services.json}
+eas env:create --name GOOGLE_SERVICES_JSON --environment development --scope project --type file --visibility secret --value google-services-dev.json
+
+eas env:create --name GOOGLE_SERVICES_JSON --environment production --scope project --type file --visibility secret --value google-services.json
+
+# GOOGLE_SERVICES_INFOPLIST : {firebase > development | production 프로젝트 > 프로젝트설정 > Apple 앱 > GoogleService-Info.plist}
+eas env:create --name GOOGLE_SERVICES_INFOPLIST --environment development --scope project --type file --visibility secret --value GoogleService-Info-dev.plist
+
+eas env:create --name GOOGLE_SERVICES_INFOPLIST --environment production --scope project --type file --visibility secret --value GoogleService-Info.plist
+```
+
+- GOOGLE_SERVICES_JSON, GOOGLE_SERVICES_INFOPLIST는 app.config.js 에서 사용
+
+#### EAS 환경변수
+
+###### Plain Text (보여져도 되는 부분)
+
+- development / production 구분 필요
+  - APP_NAME : app.config.js에서 사용할 앱 이름
+  - APP_PACKAGE_NAME : app.config.js에서 사용할 앱 package 이름
+
+```
+# APP_NAME : "appname (dev)" / "appname"
+eas env:create --scope project --environment development --type string --visibility plaintext --name APP_NAME --value "{appname} (dev)"
+eas env:create --scope project --environment production --type string --visibility plaintext --name APP_NAME --value "{appname}"
+
+# APP_PACKAGE_NAME : "com.company.appname.dev" / "com.company.appname"
+eas env:create --scope project --environment development --type string --visibility plaintext --name APP_PACKAGE_NAME --value "com.{companyname}.{appname}.dev"
+eas env:create --scope project --environment production --type string --visibility plaintext --name APP_PACKAGE_NAME --value "com.{companyname}.{appname}"
+```
+
+###### Sensitive (Client 코드에서 사용되면 결국 노출 되는 부분)
+
+- ADMOB 관련 (android, ios 구분은 있지만, development, production 공통 사용)
+  - ADMOB_ANDROID_APP_ID : admob에서 만든 안드로이드 프로젝트의 앱 ID"
+  - ADMOB_IOS_APP_ID : admob에서 만든 ios 프로젝트의 앱 ID
+  - ADMOB_ANDROID_xxx_AD_ID : admob에서 만든 안드로이드 프로젝트의 광고 단위의 ID (클라이언트 코드에서 사용됨)
+  - ADMOB_IOS_xxx_AD_ID : admob에서 만든 ios 프로젝트의 광고 단위의 ID (클라이언트 코드에서 사용됨)
+
+```
+# ADMOB_ANDROID_APP_ID
+eas env:create --scope project --environment development --environment production --type string --visibility sensitive --name ADMOB_ANDROID_APP_ID --value "{admob>안드로이드프로젝트>앱설정>앱ID}"
+
+# ADMOB_IOS_APP_ID
+eas env:create --scope project --environment development --environment production --type string --visibility sensitive --name ADMOB_IOS_APP_ID --value "{admob>ios프로젝트>앱설정>앱ID}"
+```
+
+- Firebase 관련 (development / production 구분 필요) : firebase web의 firebaseConfig 내용으로 채워넣음.
+- FIREBASE*CONFIG*\* : web app인 나의 expo app에서 web형식으로 firebase를 사용하기 위한 정보
+  - FIREBASE_CONFIG_API_KEY
+  - FIREBASE_CONFIG_AUTH_DOMAIN
+  - FIREBASE_CONFIG_PROJECT_ID
+  - FIREBASE_CONFIG_STORAGE_BUCKET
+  - FIREBASE_CONFIG_MESSAGING_SENDER_ID
+  - FIREBASE_CONFIG_APP_ID
+  - FIREBASE_CONFIG_MEASUREMENT_ID
+
+```
+# FIREBASE_CONFIG_ : (firebase development | production 프로젝트> 프로젝트 설정> 웹앱 > SDK 설정참고)
+eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_API_KEY --value "{}"
+eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_AUTH_DOMAIN --value "{}"
+eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_PROJECT_ID --value "{}"
+eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_STORAGE_BUCKET --value "{}"
+eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_MESSAGING_SENDER_ID --value "{}"
+eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_APP_ID --value "{}"
+eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_MEASUREMENT_ID --value "{}"
+
+eas env:create --scope project --environment production --type string --visibility sensitive --name FIREBASE_CONFIG_API_KEY --value "{}"
+eas env:create --scope project --environment production --type string --visibility sensitive --name FIREBASE_CONFIG_AUTH_DOMAIN --value "{}"
+eas env:create --scope project --environment production --type string --visibility sensitive --name FIREBASE_CONFIG_PROJECT_ID --value "{}"
+eas env:create --scope project --environment production --type string --visibility sensitive --name FIREBASE_CONFIG_STORAGE_BUCKET --value "{}"
+eas env:create --scope project --environment production --type string --visibility sensitive --name FIREBASE_CONFIG_MESSAGING_SENDER_ID --value "{}"
+eas env:create --scope project --environment production --type string --visibility sensitive --name FIREBASE_CONFIG_APP_ID --value "{}"
+eas env:create --scope project --environment production --type string --visibility sensitive --name FIREBASE_CONFIG_MEASUREMENT_ID --value "{}"
+```
+
+###### secret (노출 되면 안되는것, appconfig에서만 사용할 것들)
+
+- google service 관련 파일 (development/production 구분 필요) - GOOGLE_SERVICES_INFO_PLIST : Apple 앱을 위한 구글 서비스 관련 정보 - GOOGLE_SERVICES_JSON : Android 앱을 위한 구글 서비스 관련 정보 - GOOGLE_SIGN_IN_CLIENT_ID : google 로그인 위한 웹 클라이언트 ID
+  > GOOGLE_SERVICES_INFO_PLIST, GOOGLE_SERVICES_JSON 생성 명령어는 이미 위에 EAS credentials 파트에서 써놓음.
+
+```
+# GOOGLE_SIGN_IN_CLIENT_ID : {firebase > development | production 프로젝트 > authentication>로그인방법>Google > 웹SDK구성 > 웹클라이언트ID}
+eas env:create --scope project --environment development --type string --visibility secret --name GOOGLE_SIGN_IN_CLIENT_ID --value "{}"
+eas env:create --scope project --environment production --type string --visibility secret --name GOOGLE_SIGN_IN_CLIENT_ID --value "{}"
+```
+
+#### 환경구성
+
+- firebase : “development", "production" 용 프로젝트 구분 생성 필요. 내부적으로 ios, android 시작
+- admob : "android", ”ios" 프로젝트만 필요(dev, production 구분 안함)
+- eas credentials : "development", "production" 구분 및 그 안에서 "android", "ios" 구분
+
+#### ADMOB 관련 환경변수를 공통으로 사용하는 이유
+
+- development에서는 광고 단위의 ID 대신 testIds를 사용하여 실제 광고가 나오지 않게 함.
+- 공통으로 사용하게 되니, ADMOB에서 development, production 환경을 나눠줄 필요가 없어짐. (Android 프로젝트와 ios 프로젝트를 구분해서 세팅은 원래 필요함)
+
+#### firebase에서 왜 ios, android 말고 web을 만들었을까?
+
+> 실제 동작은 web 코드의 firebase를 사용해 돌아감.
+
+- expo 프로젝트가 js를 사용하기 때문에 firebase 를 사용하기 위해 web으로 만든 내용이 실제 동작이 됨. firebaseConfig.ts 내용을 보면 initializeApp, getFirestore 등을 web 기준으로 하고 있음.
+- 그럼 반대로 왜 ios, android 가 필요할까?
+- 앱을 구성할 때, 구글 서비스(구글 signin, 앱초대등)에 대한 정보를 들고 가는데 이게 ios, andriod 안에 들어있음.
+- 이를 생각해보면 firebaseConfig 내용은 어쩔 수 없이 client 코드에 들어가서 노출이 되지만, 노출이 되지 않는 구글 서비스를 활용하여 보안 부분을 강화할 수 있을듯!
