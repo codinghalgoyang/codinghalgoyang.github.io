@@ -25,12 +25,12 @@ eas credentials
 
 ```bash
 # GOOGLE_SERVICES_JSON : {firebase > development | production 프로젝트 > 프로젝트설정 > Android 앱 > google-services.json}
-eas env:create --name GOOGLE_SERVICES_JSON --environment development --scope project --type file --visibility secret --value google-services-dev.json
+eas env:create --name GOOGLE_SERVICES_JSON --environment development --environment preview --scope project --type file --visibility secret --value google-services-dev.json
 
 eas env:create --name GOOGLE_SERVICES_JSON --environment production --scope project --type file --visibility secret --value google-services.json
 
 # GOOGLE_SERVICES_INFOPLIST : {firebase > development | production 프로젝트 > 프로젝트설정 > Apple 앱 > GoogleService-Info.plist}
-eas env:create --name GOOGLE_SERVICES_INFOPLIST --environment development --scope project --type file --visibility secret --value GoogleService-Info-dev.plist
+eas env:create --name GOOGLE_SERVICES_INFOPLIST --environment development --environment preview --scope project --type file --visibility secret --value GoogleService-Info-dev.plist
 
 eas env:create --name GOOGLE_SERVICES_INFOPLIST --environment production --scope project --type file --visibility secret --value GoogleService-Info.plist
 ```
@@ -47,11 +47,11 @@ eas env:create --name GOOGLE_SERVICES_INFOPLIST --environment production --scope
 
 ```
 # APP_NAME : "appname (dev)" / "appname"
-eas env:create --scope project --environment development --type string --visibility plaintext --name APP_NAME --value "{appname} (dev)"
+eas env:create --scope project --environment development --environment preview --type string --visibility plaintext --name APP_NAME --value "{appname} (dev)"
 eas env:create --scope project --environment production --type string --visibility plaintext --name APP_NAME --value "{appname}"
 
 # APP_PACKAGE_NAME : "com.company.appname.dev" / "com.company.appname"
-eas env:create --scope project --environment development --type string --visibility plaintext --name APP_PACKAGE_NAME --value "com.{companyname}.{appname}.dev"
+eas env:create --scope project --environment development --environment preview --type string --visibility plaintext --name APP_PACKAGE_NAME --value "com.{companyname}.{appname}.dev"
 eas env:create --scope project --environment production --type string --visibility plaintext --name APP_PACKAGE_NAME --value "com.{companyname}.{appname}"
 ```
 
@@ -65,10 +65,10 @@ eas env:create --scope project --environment production --type string --visibili
 
 ```
 # ADMOB_ANDROID_APP_ID
-eas env:create --scope project --environment development --environment production --type string --visibility sensitive --name ADMOB_ANDROID_APP_ID --value "{admob>안드로이드프로젝트>앱설정>앱ID}"
+eas env:create --scope project --environment development --environment preview --environment production --type string --visibility sensitive --name ADMOB_ANDROID_APP_ID --value "{admob>안드로이드프로젝트>앱설정>앱ID}"
 
 # ADMOB_IOS_APP_ID
-eas env:create --scope project --environment development --environment production --type string --visibility sensitive --name ADMOB_IOS_APP_ID --value "{admob>ios프로젝트>앱설정>앱ID}"
+eas env:create --scope project --environment development --environment preview --environment production --type string --visibility sensitive --name ADMOB_IOS_APP_ID --value "{admob>ios프로젝트>앱설정>앱ID}"
 ```
 
 - Firebase 관련 (development / production 구분 필요) : firebase web의 firebaseConfig 내용으로 채워넣음.
@@ -83,13 +83,13 @@ eas env:create --scope project --environment development --environment productio
 
 ```
 # FIREBASE_CONFIG_ : (firebase development | production 프로젝트> 프로젝트 설정> 웹앱 > SDK 설정참고)
-eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_API_KEY --value "{}"
-eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_AUTH_DOMAIN --value "{}"
-eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_PROJECT_ID --value "{}"
-eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_STORAGE_BUCKET --value "{}"
-eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_MESSAGING_SENDER_ID --value "{}"
-eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_APP_ID --value "{}"
-eas env:create --scope project --environment development --type string --visibility sensitive --name FIREBASE_CONFIG_MEASUREMENT_ID --value "{}"
+eas env:create --scope project --environment development --environment preview --type string --visibility sensitive --name FIREBASE_CONFIG_API_KEY --value "{}"
+eas env:create --scope project --environment development --environment preview --type string --visibility sensitive --name FIREBASE_CONFIG_AUTH_DOMAIN --value "{}"
+eas env:create --scope project --environment development --environment preview --type string --visibility sensitive --name FIREBASE_CONFIG_PROJECT_ID --value "{}"
+eas env:create --scope project --environment development --environment preview --type string --visibility sensitive --name FIREBASE_CONFIG_STORAGE_BUCKET --value "{}"
+eas env:create --scope project --environment development --environment preview --type string --visibility sensitive --name FIREBASE_CONFIG_MESSAGING_SENDER_ID --value "{}"
+eas env:create --scope project --environment development --environment preview --type string --visibility sensitive --name FIREBASE_CONFIG_APP_ID --value "{}"
+eas env:create --scope project --environment development --environment preview --type string --visibility sensitive --name FIREBASE_CONFIG_MEASUREMENT_ID --value "{}"
 
 eas env:create --scope project --environment production --type string --visibility sensitive --name FIREBASE_CONFIG_API_KEY --value "{}"
 eas env:create --scope project --environment production --type string --visibility sensitive --name FIREBASE_CONFIG_AUTH_DOMAIN --value "{}"
@@ -107,7 +107,7 @@ eas env:create --scope project --environment production --type string --visibili
 
 ```
 # GOOGLE_SIGN_IN_CLIENT_ID : {firebase > development | production 프로젝트 > authentication>로그인방법>Google > 웹SDK구성 > 웹클라이언트ID}
-eas env:create --scope project --environment development --type string --visibility secret --name GOOGLE_SIGN_IN_CLIENT_ID --value "{}"
+eas env:create --scope project --environment development --environment preview --type string --visibility secret --name GOOGLE_SIGN_IN_CLIENT_ID --value "{}"
 eas env:create --scope project --environment production --type string --visibility secret --name GOOGLE_SIGN_IN_CLIENT_ID --value "{}"
 ```
 
@@ -138,16 +138,10 @@ eas build --profile development --platform android
 eas build --profile production --platform android
 ```
 
-#### development 환경변수 사용하면서 expo production으로 빌드하기
+#### development 환경변수 사용하면서 developmentClient가 아니게 빌드 할 수 있나?
 
-eas.json
+> No! `eas.json`의 build > development > developmentClient를 없애보려고 했으나 실패함.
 
-```json
-{
-  "build": {
-    "development": {
-      "developmentClient": true // 이거 여부에 따라 expo development로 빌드될듯 -> 빌드 안됨
-    }
-  }
-}
-```
+- development는 진짜 expo의 developmentClient를 위한 것 같다.
+- 테스트용 DB를 따로 구분할 필요가 있긴함. -> preview 환경을 이용하자
+- build는 preview로 하고 development의 환경을 공유해서 development앱과 preview앱이 같은 테스트 환경을 쓰도록 하자!
