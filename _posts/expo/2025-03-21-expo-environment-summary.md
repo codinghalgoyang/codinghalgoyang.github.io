@@ -16,8 +16,10 @@ eas credentials
 # android / ios 선택
 # development / production 선택
 # 일단 확인해보니 android의 development와 production은 같은 sha-1을 뱉는다.
-# 일단 같아도 크게 상관은 없으니 진행한다. (그래도 둘다 해줘야 eas 환경에 development, production 모두에 대한 sha-1 이 들어갈듯)
+> build를 할 때 package 명이 달라지니 credentials도 새로 만든다. 이걸 사용하자
 ```
+
+> build를 할 때 package 명이 달라지니 credentials도 새로 만든다. 이걸 사용하자
 
 파일을 다운로드 후, 업로드를 해준다. (이미 환경변수가 있을 경우, 명령어 입력후 Overwrite가 띄면 Y 선택 )
 
@@ -128,3 +130,10 @@ eas env:create --scope project --environment production --type string --visibili
 - 그럼 반대로 왜 ios, android 가 필요할까?
 - 앱을 구성할 때, 구글 서비스(구글 signin, 앱초대등)에 대한 정보를 들고 가는데 이게 ios, andriod 안에 들어있음.
 - 이를 생각해보면 firebaseConfig 내용은 어쩔 수 없이 client 코드에 들어가서 노출이 되지만, 노출이 되지 않는 구글 서비스를 활용하여 보안 부분을 강화할 수 있을듯!
+
+#### build
+
+```
+eas build --profile development --platform android
+eas build --profile production --platform android
+```
