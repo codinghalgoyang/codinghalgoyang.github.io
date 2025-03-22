@@ -152,3 +152,17 @@ eas build --profile production --platform android
 - development는 진짜 expo의 developmentClient를 위한 것 같다.
 - 테스트용 DB를 따로 구분할 필요가 있긴함. -> preview 환경을 이용하자
 - build는 preview로 하고 development의 환경을 공유해서 development앱과 preview앱이 같은 테스트 환경을 쓰도록 하자!
+
+#### `FIREBASE_CONFIG_*`와 `ADMOB_*_APP_ID`는 undefined로 나온다.
+
+- EXPO_PUBLIC_APP_VIRANT를 사용하고 생문자열을 넣어보자!
+- eas environment 문서에 보면 "The environment variables with the `EXPO_PUBLIC_` prefix are available as process.env variables in your app's code. This means you can use them to dynamically configure your app behavior based on the values from environment variables."라고 나옴.
+- app.config.js 가 아닌 앱 내에서 사용할 변수는 모두 `EXPO_PUBLIC_`을 사용해야하는 것으로 보임.
+- const IS*DEV = process.env.EXPO_PUBLIC_APP_VARIANT === "development"; EXPO_PUBLIC*도 왜 undefined로 나올까?
+- google signin webClientId 설정은 app.config.js에서 이미 해주니깐 굳이 안해줘도 되나? -> Yes, Configure 하는 동작에서 webClientId 직접 안넣어줘도 됨!
+- 일단, 지금까지 결과로는 빌드할 때, app.config.js에서 `process.env.`는 동작하나 나머지 코드에서는 동작하지 않는 것 같다.
+- 그냥 코드에서는 `__DEV__` 로 development 구분이 가능한 것 같다. 그럼 그냥 코드에서는 `__DEV__`로 구분하자!
+
+> 정리하면, eas environment는 app.config.js에서만 읽을 수 있고, 안읽히는 항목도 존재한다.(ADMOB_APP_ID)
+> 클라이언트 코드에서 development 구분이 필요할땐, `__DEV__`를 사용한다.
+> 기존에 production에서 안된 이유는 google-service.json을 업데이트 안하면서 sha-1 키가 development꺼로 들어가면서 firebase 접근이 안된것 같다.
