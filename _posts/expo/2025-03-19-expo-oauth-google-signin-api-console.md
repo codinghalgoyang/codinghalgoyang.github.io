@@ -8,6 +8,7 @@ categories: expo
 
 - expo, eas를 사용해 빌드 및 배포 과정에 필요한 sha-1키를 얻는다(eas credentials)
 - firebase에 해당 sha-1키를 등록한다.(프로젝트>앱설정)
+- google-service.json, plist 파일 재다운로드 필요
 - 구글 플레이 콘솔에 앱을 등록한다. (진짜 되는지 테스트 필요)
 
 #### OAuth란?
