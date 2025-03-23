@@ -166,3 +166,11 @@ eas build --profile production --platform android
 > 정리하면, eas environment는 app.config.js에서만 읽을 수 있고, 안읽히는 항목도 존재한다.(ADMOB_APP_ID)
 > 클라이언트 코드에서 development 구분이 필요할땐, `__DEV__`를 사용한다.
 > 기존에 production에서 안된 이유는 google-service.json을 업데이트 안하면서 sha-1 키가 development꺼로 들어가면서 firebase 접근이 안된것 같다.
+
+- 다시 정리, `__DEV__`를 사용하면 preview 환경도 development가 아니기 때문에 production의 환경을 사용하게 된다.
+- 다른게 있는지 확인해봤으나, 없다.
+- 그런데, development와 preview 환경이 합쳐지는게 맞는지도 의문이 든다.
+- development로 만들어놓은 앱의 장점은 hotreload인데 preview로 덮어쓰면 development를 다시 빌드하거나 예전껄 받아야하니깐 이것도 이상하다.
+
+> 결론. 그냥 development랑 production만 나눈다. (preview 노 사용)
+> 테스트가 필요할 경우, production에서 특정 DB만 직접 골라 삭제하는 방식을 사용한다!
