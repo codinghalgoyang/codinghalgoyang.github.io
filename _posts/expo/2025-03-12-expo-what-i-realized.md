@@ -30,3 +30,4 @@ categories: expo
 - MUI 와 같은 개념이 미리 도이되어 있으면 편하다.
     - ThemedText, ThemedIcon등을 미리 먼저 만들어 놓고 진행하는게 편하다.
     - Colors 외에도 Size등도 미리 big, normal, small 정도로 나누어 진행해도 좋다.
+- production 모드에서 에러가 발생했을 때, 구체적인 에러를 볼 수 있어야 한다.
