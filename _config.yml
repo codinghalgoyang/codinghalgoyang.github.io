@@ -113,9 +113,9 @@ analytics:
 # Site Author
 author:
   name: "코딩할고양"
-  avatar: "/assets/images/small-logo-transparent.png"
+  # avatar: "/assets/images/small-logo-transparent.png"
   bio: "웹과 앱 개발에 관심이 많습니다."
-  location: "Suwon, Korea"
+  # location: "Suwon, Korea"
   email: "codinghalgoyang@gmail.com"
   links:
     - label: "Email"
