@@ -17,11 +17,11 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 # Site Settings
 locale: "ko-KR"
 rtl: # true, false (default) # turns direction of the page into right to left for RTL languages
-title: "코딩할고양 노트"
+title: "스터디 노트"
 title_separator: "|"
 subtitle: # site tagline that appears below site title in masthead
-name: "코딩할고양 노트"
-description: "코딩 관련 학습한 내용을 정리하는 사이트입니다."
+name: "스터디 노트"
+description: "학습한 내용을 정리하는 사이트입니다."
 url: "https://codinghalgoyang.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: "https://github.com/codinghalgoyang/codinghalgoyang.github.io"
@@ -112,7 +112,7 @@ analytics:
 
 # Site Author
 author:
-  name: "코딩할고양"
+  # name: "코딩할고양"
   # avatar: "/assets/images/small-logo-transparent.png"
   bio: "웹과 앱 개발에 관심이 많습니다."
   # location: "Suwon, Korea"
