@@ -33,3 +33,5 @@ categories: expo
     - ThemedText, ThemedIcon등을 미리 먼저 만들어 놓고 진행하는게 편하다.
     - Colors 외에도 Size등도 미리 big, normal, small 정도로 나누어 진행해도 좋다.
 - production 모드에서 에러가 발생했을 때, 구체적인 에러를 볼 수 있어야 한다.
+- api함수는 예외를 따로 처리하지 않고, api를 호출하는 곳에서 예외를 처리한다!
+    - 구체적인 에러를 출력하기 편하고, 코드도 간결해진다.
