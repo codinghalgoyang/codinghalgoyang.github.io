@@ -20,7 +20,7 @@ categories: expo
 - 개발용 Database가 필요하다. (출시 이후 개발 테스트 용 Database가 별도로 필요하다)
 - 색인이 필요한 항목을 살펴보고 지정하자. -> 단일 필드는 [자동으로 색인에 포함](https://firebase.google.com/docs/firestore/query-data/indexing)됨.
 - createdAt, updatedAt을 항목과 plan에 추가하자!
-  - createdAt : map()으로 생성하는 컴포넌트는 고유키를 넣어줘야하는데, 이름만으로는 key가 겹치는 경우가 생기기 때문에, createdAt+{항목} 정도로 key를 정해주면 겹치는 일이 없을듯하다.
+  - createdAt : map()으로 생성하는 컴포넌트는 고유키를 넣어줘야하는데, 이름만으로는 key가 겹치는 경우가 생기기 때문에, createdAt+{항목} 정도로 key를 정해주면 겹치는 일이 없을듯하다. + 정렬시에도 사용하면 좋을 것 같다.
   - updatedAt : 나중에 공유 기능으로 인해 오프라인 상황을 지원할 경우, 최종으로 된걸 반영하기 위해 필요해보임.
 
 ## 마케팅
