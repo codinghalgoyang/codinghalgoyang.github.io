@@ -30,13 +30,6 @@ category_nav:
         url: /category/github
       - title: "etc"
         url: /category/etc
-
-  - title: personal
-    children:
-      - title: "english"
-        url: /category/english
-      - title: "book"
-        url: /category/book
   #   - title: "css"
   #     url: "/categories/css"
   #   - title: "javascript"
