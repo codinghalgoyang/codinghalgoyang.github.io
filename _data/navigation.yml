@@ -27,7 +27,7 @@ category_nav:
   - title: etc
     children:
       - title: "github"
-        url: /category/github
+        url: /category/github-pages
       - title: "etc"
         url: /category/etc
 

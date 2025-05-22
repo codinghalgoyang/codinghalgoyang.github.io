@@ -1,12 +1,12 @@
 ---
 layout: single
-title: "[github/github-pages] minimal mistakes theme으로 github pages 시작하기"
-categories: github/github-pages
+title: "[github-pages] minimal mistakes theme으로 github pages 시작하기"
+categories: github-pages
 ---
 
 #### 생성방법
 
-- https://github.com/topics/jekyll-theme 접속후, 마음에 드는 테마 선택해서 fork 하기
+- [minimal-mistakes repository](https://github.com/mmistakes/minimal-mistakes) fork 하기
 - fork 한 repository에서 settings에서 "{id}.gihub.io"
 - `_config.yml` 파일 수정
   - `주석처리된 url 부분의 주석을 해제한 후, “https://{id}.github.io“로 수정후 커밋`

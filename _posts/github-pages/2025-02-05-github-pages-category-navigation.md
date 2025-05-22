@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[github/minimal-mistakes] category navigation 사용하기"
-categories: github/minimal-mistakes
+title: "[github-pages] category navigation 사용하기"
+categories: github-pages
 ---
 
 #### 구조
