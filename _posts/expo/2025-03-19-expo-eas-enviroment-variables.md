@@ -4,10 +4,10 @@ title: "[expo] eas 환경변수 내용 정리"
 categories: expo
 ---
 
-#### 결론
+## 나의 결론
 
 - 내가 local에 환경변수를 굳이 가지고 있을 필요가 없음.
-- 환경변수는 `development, production` 두 가지로 구분하자. (preview까지는 굳이 하지 않아도 될듯)
+- 환경변수는 코드 내 `__DEV__`가 false가 되는 `preview`, `production`는 함께 사용하고 `__DEV__`가 true가 되는 `development`는 따로 구분하자.
 - plain text로 구분되어야할 환경 변수들
   - 가독성을 위해 사용자 앱에서 사용할 환경변수는 EXPO*PUBLIC*을 붙이자.
   - app config 에서 사용할 환경 변수는 EXPO*PUBLIC*을 붙이지 말자.
@@ -16,7 +16,9 @@ categories: expo
 - secret
   - 빌드시에 사용할 애들(예. 구글서비스json 파일)
 
-# https://docs.expo.dev/eas/environment-variables/ 문서 정리
+---
+
+## [환경변수 - Expo Doc](https://docs.expo.dev/eas/environment-variables/) 문서 정리
 
 환경 변수들을 EAS에서 어떻게 사용하고 관리하는가에 대한 내용임.
 
