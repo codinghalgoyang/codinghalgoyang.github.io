@@ -15,7 +15,7 @@ main:
 category_nav:
   - title: web & app
     children:
-      - title: "windows programming"
+      - title: "windows-programming"
         url: /category/windows-programming
       - title: "web domain knowledge"
         url: /category/web-domain-knowledge
