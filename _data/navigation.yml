@@ -13,56 +13,11 @@ main:
 
 # nav for docs(categories)
 category_nav:
-  - title: web & app
-    children:
-      - title: "windows-programming"
-        url: /category/windows-programming
-      - title: "web domain knowledge"
-        url: /category/web-domain-knowledge
-      - title: "web programming"
-        url: /category/web-programming
-      - title: "expo"
-        url: /category/expo
-
-  - title: etc
-    children:
-      - title: "github-pages"
-        url: /category/github-pages
-      - title: "etc"
-        url: /category/etc
-
-  - title: personal
-    children:
-      - title: "english"
-        url: /category/english
-      - title: "book"
-        url: /category/book
-  #   - title: "css"
-  #     url: "/categories/css"
-  #   - title: "javascript"
-  #     url: "/categories/javascript"
-  #   - title: "react"
-  #     url: "/categories/react"
-  # - title: "web domain knowledge"
-  #     url: "/categories/web-domain-knowledge"
-
-  # - title: "application"
-  # children:
-  #   - title: "expo"
-  #     url: "/categories/expo"
-  #   - title: "electron"
-  #     url: "/categories/electron"
-
-  # - title: "etc"
-  # children:
-  #   - title: "minimal mistakes"
-  #     url: "/categories/minimal-mistakes"
-  #   - title: "tools"
-  #     url: "/categories/tools"
-
-  # - title: "personal"
-  # children:
-  #   - title: "english"
-  #     url: "/categories/english"
-  #   - title: "life"
-  #     url: "/categories/life"
+  - title: "web"
+    url: /category/web
+  - title: "expo"
+    url: /category/expo
+  - title: "windows"
+    url: /category/windows
+  - title: "utils"
+    url: /category/utils

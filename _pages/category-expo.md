@@ -1,5 +1,5 @@
 ---
-title: "mobile app 관련 글 모음"
+title: "category : expo"
 layout: archive
 permalink: /category/expo
 ---
