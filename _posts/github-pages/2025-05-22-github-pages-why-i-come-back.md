@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[github-pages] 다시 github-pages로 돌아온 이유
+title: "[github-pages] 다시 github-pages로 돌아온 이유"
 categories: github-pages
 ---
 
