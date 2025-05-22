@@ -13,11 +13,13 @@ main:
 
 # nav for docs(categories)
 category_nav:
-  - title: "web"
-    url: /category/web
-  - title: "expo"
-    url: /category/expo
-  - title: "windows"
-    url: /category/windows
-  - title: "utils"
-    url: /category/utils
+  - title: "category"
+    children:
+      - title: "web"
+        url: /category/web
+      - title: "expo"
+        url: /category/expo
+      - title: "windows"
+        url: /category/windows
+      - title: "utils"
+        url: /category/utils
