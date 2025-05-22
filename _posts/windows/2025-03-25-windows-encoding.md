@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[windows] 문자열 인고딩과 ASCII, ANSI, UNICODE 관련 내용 정리"
+title: "[windows] 문자열 인코딩과 ASCII, ANSI, UNICODE 관련 내용 정리"
 categories: windows
 ---
 
