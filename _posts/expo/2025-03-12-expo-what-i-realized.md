@@ -26,7 +26,9 @@ categories: expo
 - createdAt, updatedAt을 항목과 plan에 추가하자!
   - createdAt : map()으로 생성하는 컴포넌트는 고유키를 넣어줘야하는데, 이름만으로는 key가 겹치는 경우가 생기기 때문에, createdAt+{항목} 정도로 key를 정해주면 겹치는 일이 없을듯하다. + 정렬시에도 사용하면 좋을 것 같다.
   - updatedAt : 나중에 공유 기능으로 인해 오프라인 상황을 지원할 경우, 최종으로 된걸 반영하기 위해 필요해보임.
-- 생각보다 read/write 횟수가 많다. (firebase -> supabase)
+- firebase에서 supabase로 갈아탐
+  - 쓰기 작업이 많이 겹치는 경우, transaction을 사용해야하는데 문서 전체에 lock을 거니 다 느려짐. 딱 필요한 항목만 분리해서 lock을 걸어야하는데, 그러면 read횟수가 너무 많이 늘어나고 그러면 firebase의 r/w 횟수로 인한 비용이 증가함.
+  - firebase에 좋은 점 : google signin이 안드로이드 + ios 모두 지원. supabse는 아직까진(25년 5월) ios google signin을 지원하지 않음
 
 ## 마케팅
 
