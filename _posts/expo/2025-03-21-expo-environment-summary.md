@@ -174,3 +174,5 @@ eas build --profile production --platform android
 
 > 결론. 그냥 development랑 production만 나눈다. (preview 노 사용)
 > 테스트가 필요할 경우, production에서 특정 DB만 직접 골라 삭제하는 방식을 사용한다!
+
+env가 필요한경우, EXPO*PUBLIC* 방법말고 고전 방법(expo-constants)이 존재하고, 그걸 사용하자
