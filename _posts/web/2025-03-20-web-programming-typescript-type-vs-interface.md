@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[web/programming] typescript Type vs Interface (from Typescript cheatsheet)"
+title: "[web/programming] Type vs Interface (from Typescript cheatsheet)"
 categories: web/programming
 ---
 
