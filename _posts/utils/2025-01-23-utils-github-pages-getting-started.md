@@ -17,6 +17,11 @@ categories: utils/github-pages
 - `_posts` 라는 폴더 밑에 md 파일 생성
 - `2021-01-13-{url}.md` 형태로 이름 생성
 
+> 저 부분이 url이 되면, 카테고리를 url에 붙여줘야 할까? No!
+
+- 폴더 별로 url이 한 번 더 들어가기 때문에 상관없음
+  - `예) url/utils/github-pages/위부분url`
+
 ```
 ___
 layout: single
