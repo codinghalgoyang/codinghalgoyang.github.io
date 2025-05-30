@@ -37,3 +37,9 @@ npm run start
 
 npx expo start # 그냥 expo start를 하면, 버전 확인하라는 문구가 발생하는 듯. (npx expo 랑 그냥 expo와 버전차이가 있는 듯함.)
 ```
+
+#### development build
+
+```bash
+eas build --profile development --platform android
+```
