@@ -53,6 +53,10 @@ npm run dev # package.json : "next dev --turbopack"
 - CDN을 통해 전세계적으로 콘텐츠를 빠르게 제공함
 - 서버리스 함수를 지원하여 백엔드 로직을 구현할 수 있게 해줌
 
+#### Vercel의 단점
+
+- 광고를 달기 위해서는 plan에 가입해야함 (상업적사용)
+
 #### Vercel 초기 설정
 
 - signup시, Continue with GitHub 선택
