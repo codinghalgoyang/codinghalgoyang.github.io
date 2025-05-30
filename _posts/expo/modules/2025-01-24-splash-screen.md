@@ -1,18 +1,19 @@
 ---
 layout: single
-title: "[expo] splash screen 사용하기"
-published: false
-categories: expo
+title: "[expo/modules] Splash Screen"
+categories: expo/modules
 ---
 
-문서 : https://docs.expo.dev/versions/latest/sdk/splash-screen/
+#### 참고자료 : https://docs.expo.dev/versions/latest/sdk/splash-screen/
+
+> 주의1 : splash 이미지 변경은 expo go 앱에서는 확인 불가능함. 이미지 변경 확인을 위해서는 새로 빌드가 필요함
+> 주의2 : splash screen은 앱이 실행하면서 처음 나오는 화면으로, 개발모드에서 앱이 로드될 때 나오는 화면과 헷갈리면 안됨. 개발모드의 앱을 처음 실행하면서 나오는 화면이 splash screen이고, 개발모드에서 앱을 로딩하면서 나오는 화면이랑은 다른 개념임
 
 #### expo-splash-screen 설치
 
 ```
-# 이미 설치되어 있었음
-# 별도 (추가)빌드 필요없었음
-npx expo install expo-splash-screen
+# 이미 설치되어 있음, package.json 확인시 존재하면 설치된 것임
+# npx expo install expo-splash-screen
 ```
 
 #### splash 이미지(다른 예제를 보니 1024x1024 px 사이즈 사용함)

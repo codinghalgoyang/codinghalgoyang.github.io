@@ -1,10 +1,10 @@
 ---
 layout: single
-title: "[expo/components] StatusBar"
-categories: expo/components
+title: "[expo/modules] StatusBar"
+categories: expo/modules
 ---
 
-> 핵심 : `react-native`가 아닌 `expo-status-bar`의 StatusBar를 import 한다.
+> 주의 : `react-native`가 아닌 `expo-status-bar`의 StatusBar를 import 한다.
 
 #### 코드
 

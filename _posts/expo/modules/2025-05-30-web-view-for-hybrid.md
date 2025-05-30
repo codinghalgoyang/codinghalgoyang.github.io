@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[expo/components] 하이브리드앱을 위한 Web View"
-categories: expo/components
+title: "[expo/modules] 하이브리드앱을 위한 Web View"
+categories: expo/modules
 ---
 
 #### 패키지 설치
