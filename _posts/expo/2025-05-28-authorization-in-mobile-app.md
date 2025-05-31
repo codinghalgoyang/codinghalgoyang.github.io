@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[web] 모바일 앱과 서버 사이의 보안 메커니즘"
-categories: web
+title: "[expo] 모바일 앱과 서버 사이의 보안 메커니즘"
+categories: expo
 ---
 
 웹 브라우저의 SOP & CORS 에 대해 알아보던 중, 그럼 모바일 앱의 Origin은 어떤식으로 구성하는가에 대해 궁금해짐. > 모바일 앱은 Origin이 아닌 다른 메커니즘을 사용해 클라이언트를 식별하고 보안을 강화함.
