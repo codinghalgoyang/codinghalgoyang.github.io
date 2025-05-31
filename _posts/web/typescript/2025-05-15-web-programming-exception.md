@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[web/programming] 예외 (Exception)"
-categories: web/programming
+title: "[web/typescript] 예외 (Exception)"
+categories: web/typescript
 ---
 
 김민태의 프론트엔드 아카데미 - Javascript & Typescript Essential 내용 정리

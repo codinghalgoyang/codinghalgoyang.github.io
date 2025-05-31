@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[web/programming] Type vs Interface (from Typescript cheatsheet)"
-categories: web/programming
+title: "[web/typescript] Type vs Interface (from Typescript cheatsheet)"
+categories: web/typescript
 ---
 
 #### 결론 : 언제 type을 쓰고, 언제 interface를 쓸까?

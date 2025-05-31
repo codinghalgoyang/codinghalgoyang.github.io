@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[web/programming] HTML Overview"
-categories: web/programming
+title: "[web/html] HTML Overview"
+categories: web/html
 ---
 
 #### 요소

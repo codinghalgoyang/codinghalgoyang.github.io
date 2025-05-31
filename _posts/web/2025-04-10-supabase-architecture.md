@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[expo] supabase architecture"
-categories: expo
+title: "[web] supabase architecture"
+categories: web
 ---
 
 #### Supabase란?

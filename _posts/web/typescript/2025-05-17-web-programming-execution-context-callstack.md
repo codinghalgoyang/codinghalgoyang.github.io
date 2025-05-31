@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[web/programming] 실행컨텍스트와 콜스택"
-categories: web/programming
+title: "[web/typescript] 실행컨텍스트와 콜스택"
+categories: web/typescript
 ---
 
 #### 핵심요약

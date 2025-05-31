@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[next-js] Next.js 시작하기"
-categories: next-js
+title: "[web/next-js] Next.js 시작하기"
+categories: web/next-js
 ---
 
 ## next.js 프로젝트

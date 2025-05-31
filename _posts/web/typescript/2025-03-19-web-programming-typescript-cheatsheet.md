@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[web/programming] 나만의 Typescript cheatsheet"
-categories: web/programming
+title: "[web/typescript] 나만의 Typescript cheatsheet"
+categories: web/typescript
 ---
 
 typescript 홈페이지에 들어가보면, 공식적으로 지원하는 cheatsheet가 존재한다.

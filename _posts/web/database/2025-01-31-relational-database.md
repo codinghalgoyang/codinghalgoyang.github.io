@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[web] 관계형 데이터 베이스 관련 내용 정리"
-categories: web
+title: "[web/database] 관계형 데이터 베이스 관련 내용 정리"
+categories: web/database
 ---
 
 ## 관계가 왜 중요한가?

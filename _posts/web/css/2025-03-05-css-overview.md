@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[web/programming] CSS Overview"
-categories: web/programming
+title: "[web/css] CSS Overview"
+categories: web/css
 ---
 
 ## 주요 내용

@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[web/programming] 비동기함수와 Promise"
-categories: web/programming
+title: "[web/typescript] 비동기함수와 Promise"
+categories: web/typescript
 ---
 
 ## Promise와 비동기 함수

@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[web/programming] 식 vs 문, 주요 연산자"
-categories: web/programming
+title: "[web/typescript] 식 vs 문, 주요 연산자"
+categories: web/typescript
 ---
 
 김민태의 프론트엔드 아카데미 - Javascript & Typescript Essential 내용 요약

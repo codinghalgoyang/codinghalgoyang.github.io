@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[web/programming] 변수와 상수"
-categories: web/programming
+title: "[web/typescript] 변수와 상수"
+categories: web/typescript
 ---
 
 김민태의 프론트엔드 아카데미 - Javascript & Typescript Essential 내용 요약
