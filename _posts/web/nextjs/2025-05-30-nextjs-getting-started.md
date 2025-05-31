@@ -8,6 +8,8 @@ categories: web/next-js
 
 자료 : https://nextjs-ko.org/docs
 
+- react 구조 뿐만 아니라, 서버의 역할도 함.
+
 #### 요구사항
 
 - Node.js 18.18 이상 (`node -v`로 확인인)
@@ -52,6 +54,7 @@ npm run dev # package.json : "next dev --turbopack"
 - git에 push 하면 자동으로 변경사항을 감지하고, 자동으로 빌드 및 배포가 이루어짐.
 - CDN을 통해 전세계적으로 콘텐츠를 빠르게 제공함
 - 서버리스 함수를 지원하여 백엔드 로직을 구현할 수 있게 해줌
+- secret code등도 환경변수로 서버에 넣어서 사용 가능
 
 #### Vercel의 단점
 
