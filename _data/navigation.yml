@@ -19,6 +19,8 @@ category_nav:
         url: /category/web
       - title: "expo"
         url: /category/expo
+      - title: "hybrid-app"
+        url: /category/hybrid-app
       - title: "windows"
         url: /category/windows
       - title: "utils"
