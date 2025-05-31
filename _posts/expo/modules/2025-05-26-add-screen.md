@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[expo] Screen 추가하기"
-categories: expo
+title: "[expo/modules] Screen 추가하기"
+categories: exexpo/modules
 ---
 
 - app 폴더에 스크린 컴포넌트 작성

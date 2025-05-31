@@ -1,7 +1,8 @@
 ---
 layout: single
-title: "[expo] Google Signin with supabase"
-categories: expo
+title: "[expo/modules] Google Signin with supabase"
+categories: expo/modules
+published: false
 ---
 
 > Google Signin with supabase는 ios에서는 현재 지원하지 않는다! (2025-05-23 기준)

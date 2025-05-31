@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[expo] expo Component 공식 Reference"
-categories: expo/components
+title: "[expo/modules] expo Component 공식 Reference"
+categories: expo/modules
 ---
 
 > expo에서 외부 패키지를 가져다쓸때도 한계가 느껴지긴 함.

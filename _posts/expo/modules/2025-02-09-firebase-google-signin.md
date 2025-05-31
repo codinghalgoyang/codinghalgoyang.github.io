@@ -1,21 +1,23 @@
 ---
 layout: single
-title: "[expo] firebase google signin"
-categories: expo
+title: "[expo/modules] firebase google signin"
+categories: expo/modules
+published: false
 ---
 
 #### Firebase 프로젝트 만들기
+
 - ios 앱 추가
-	- Apple bundle ID : com.codinghalgoyang.{appname}
-	- App nickname : {appname}
-	- Download GoogleService-info.txt
-	- 나머지는 넘기기
+  - Apple bundle ID : com.codinghalgoyang.{appname}
+  - App nickname : {appname}
+  - Download GoogleService-info.txt
+  - 나머지는 넘기기
 - android 앱 추가
-	- Android package name : com.codinghalgoyang.{appname}
-	- App nickname : {appname}
-	- 아래 내용에 따로 SHA1 복사하여 붙여넣기
-	- Download google-services.json
-	- 나머지 넘기기
+  - Android package name : com.codinghalgoyang.{appname}
+  - App nickname : {appname}
+  - 아래 내용에 따로 SHA1 복사하여 붙여넣기
+  - Download google-services.json
+  - 나머지 넘기기
 
 ```
 eas build:configure
@@ -31,7 +33,6 @@ eas credentials
 # What do you want to do? > Exit
 ```
 
-
 #### google-signin 설치
 
 ```
@@ -39,6 +40,7 @@ npx expo install @react-native-google-signin/google-signin
 ```
 
 app.json 수정
+
 ```json
 "expo": {
 	"plugins": [
@@ -47,20 +49,22 @@ app.json 수정
 }
 ```
 
-
 #### FIrebase 콘솔 > Authentication
-- 구글 제공업체 추가 
-	- Enable 후 Save
+
+- 구글 제공업체 추가
+  - Enable 후 Save
 
 #### 업로드 secret file to eas
+
 ```
 eas secret:create --scope project --name GOOGLE_SERVICES_JSON --type file --value {google-services.json 경로}
 
-eas secret:create --scope project --name GOOGLE_SERVICES_INFOPLIST --type file --value {GoogleService-Info.plist 경로} 
+eas secret:create --scope project --name GOOGLE_SERVICES_INFOPLIST --type file --value {GoogleService-Info.plist 경로}
 ```
 
 app.json 파일 이름 수정 > app.config.js
 app.config.js 내용을 js 형태(`export default`)로 바꿔주고, 아래 내용 추가
+
 ```js
 export default {
 	expo: {
@@ -74,13 +78,14 @@ export default {
 }
 ```
 
-
 #### development build
+
 ```
 eas build -p android --profile development
 ```
 
 index.tsx 내용 추가
+
 ```jsx
 import {
   GoogleSignin,
@@ -93,7 +98,7 @@ import { Button, StyleSheet, Text, View } from "react-native";
 export default function IndexScreen() {
   const [error, setError] = useState<Error | null>(null);
   const [userInfo, setUserInfo] = useState<User | null>(null);
- 
+
   const checkUserSession = async () => {
     try {
       const userInfo = await GoogleSignin.getCurrentUser();
@@ -131,7 +136,7 @@ export default function IndexScreen() {
       webClientId: "{firebase 콘솔 > athentication > 로그인방법 > 웹SDK구성 > 웹 클라이언트 ID}"
     });
     checkUserSession();
-  }, []); 
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -151,7 +156,7 @@ export default function IndexScreen() {
   );
 }
 
-  
+
 
 const styles = StyleSheet.create({
   container: {

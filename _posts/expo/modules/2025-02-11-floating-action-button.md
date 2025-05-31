@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[expo] Floating Action Button 구현하기"
-categories: expo/components
+title: "[expo/modules] Floating Action Button"
+categories: expo/modules
 ---
 
 ```tsx

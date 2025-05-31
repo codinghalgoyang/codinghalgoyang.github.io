@@ -1,7 +1,8 @@
 ---
 layout: single
-title: "[expo] 유연한 custom components 작성"
-categories: expo
+title: "[expo/modules] 유연한 custom components 작성"
+categories: expo/modules
+published: false
 ---
 
 아래는 custom components를 만들 때, 해당 component 스타일에 추가적인 props와 style을 변경할 수 있도록 한 custom component 예제임.

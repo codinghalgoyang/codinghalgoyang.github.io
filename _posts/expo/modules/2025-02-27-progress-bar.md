@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[expo] Progress Bar, Circle 등"
-categories: expo/components
+title: "[expo/modules] Progress Bar, Circle 등"
+categories: expo/modules
 ---
 
 #### 설치

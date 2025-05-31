@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[expo] AsyncStorage (Local Storage) 사용하기"
-categories: expo
+title: "[expo/modules] AsyncStorage (Local Storage) 사용하기"
+categories: expo/modules
 ---
 
 > Expo SDK 41 이상에서는 `@react-native-async-storage/async-storage`를 사용해야함.

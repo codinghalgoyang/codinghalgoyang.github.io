@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "[expo] google admob"
-categories: expo
+title: "[expo/modules] google admob"
+categories: expo/modules
 ---
 
 ## 구글 애드몹

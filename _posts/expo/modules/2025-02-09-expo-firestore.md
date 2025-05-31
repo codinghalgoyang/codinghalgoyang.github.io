@@ -1,10 +1,12 @@
 ---
 layout: single
-title: "[expo] firestore 사용하기"
-categories: expo
+title: "[expo/modules] firestore 사용하기"
+categories: expo/modules
+published: false
 ---
 
 Firebase 프로젝트를 사용하는 방법은 2가지가 있음.
+
 1. Firebase JS SDK 사용 : 빠른 시작, Firestore, 인증등 기본 동작 지원
 2. React Native Firebase 사용 : 추가적인 Firebase Service(Dynamic Links, Crashytics 등), Firebase Anlytics, 좀 더 강력함.
 
@@ -31,11 +33,13 @@ npx expo install firebase
 ```
 
 #### Firebase console에서 Web 추가
+
 - Firebase SDK 관련 내용 복사
 
 #### firebaseConfig.js
+
 ```tsx
-import { initializeApp } from 'firebase/app';
+import { initializeApp } from "firebase/app";
 
 // Optionally import the services that you want to use
 // import {...} from 'firebase/auth';
@@ -46,23 +50,23 @@ import { initializeApp } from 'firebase/app';
 
 // Initialize Firebase
 const firebaseConfig = {
-  apiKey: 'api-key',
-  authDomain: 'project-id.firebaseapp.com',
-  databaseURL: 'https://project-id.firebaseio.com',
-  projectId: 'project-id',
-  storageBucket: 'project-id.appspot.com',
-  messagingSenderId: 'sender-id',
-  appId: 'app-id',
-  measurementId: 'G-measurement-id',
+  apiKey: "api-key",
+  authDomain: "project-id.firebaseapp.com",
+  databaseURL: "https://project-id.firebaseio.com",
+  projectId: "project-id",
+  storageBucket: "project-id.appspot.com",
+  messagingSenderId: "sender-id",
+  appId: "app-id",
+  measurementId: "G-measurement-id",
 };
 
 const app = initializeApp(firebaseConfig);
 // For more information on how to access Firebase in your project,
 // see the Firebase documentation: https://firebase.google.com/docs/web/setup#access-firebase
-
 ```
 
 #### metro.config.js 파일 수정
+
 - FIrebase 9.7.x 버전 이상 사용시, metro.config.js 파일 수정 필요
 
 ```
@@ -70,11 +74,12 @@ npx expo customize metro.config.js
 ```
 
 metro.config.js
+
 ```js
-const { getDefaultConfig } = require('@expo/metro-config');
+const { getDefaultConfig } = require("@expo/metro-config");
 
 const defaultConfig = getDefaultConfig(__dirname);
-defaultConfig.resolver.sourceExts.push('cjs');
+defaultConfig.resolver.sourceExts.push("cjs");
 
 module.exports = defaultConfig;
 ```
@@ -83,28 +88,28 @@ module.exports = defaultConfig;
 
 ```tsx
 // App.js
-import React, { useEffect, useState } from 'react';
-import { View, Text, Button } from 'react-native';
-import { db } from './firebaseConfig';
-import { collection, addDoc, getDocs } from 'firebase/firestore';
+import React, { useEffect, useState } from "react";
+import { View, Text, Button } from "react-native";
+import { db } from "./firebaseConfig";
+import { collection, addDoc, getDocs } from "firebase/firestore";
 
 const App = () => {
   const [data, setData] = useState([]);
 
   const addData = async () => {
     try {
-      await addDoc(collection(db, 'users'), {
-        name: 'John Doe',
-        age: 30
+      await addDoc(collection(db, "users"), {
+        name: "John Doe",
+        age: 30,
       });
-      console.log('Document written successfully');
+      console.log("Document written successfully");
     } catch (e) {
-      console.error('Error adding document: ', e);
+      console.error("Error adding document: ", e);
     }
   };
 
   const fetchData = async () => {
-    const querySnapshot = await getDocs(collection(db, 'users'));
+    const querySnapshot = await getDocs(collection(db, "users"));
     const users = [];
     querySnapshot.forEach((doc) => {
       users.push({ id: doc.id, ...doc.data() });
@@ -120,12 +125,13 @@ const App = () => {
     <View style={{ padding: 20 }}>
       <Button title="Add User" onPress={addData} />
       {data.map((user) => (
-        <Text key={user.id}>{user.name} - {user.age}</Text>
+        <Text key={user.id}>
+          {user.name} - {user.age}
+        </Text>
       ))}
     </View>
   );
 };
 
 export default App;
-
 ```

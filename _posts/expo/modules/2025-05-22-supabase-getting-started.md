@@ -1,7 +1,8 @@
 ---
 layout: single
-title: "[expo] supabase 초기 설정"
-categories: expo
+title: "[expo/modules] supabase 초기 설정"
+categories: expo/modules
+published: false
 ---
 
 #### supabase 프로젝트 만들기

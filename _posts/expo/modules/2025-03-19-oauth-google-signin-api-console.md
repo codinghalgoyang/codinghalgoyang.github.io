@@ -1,7 +1,8 @@
 ---
 layout: single
-title: "[expo] Oauth, google signin, sha-1, google api console 내용 정리"
-categories: expo
+title: "[expo/modules] Oauth, google signin, sha-1, google api console 내용 정리"
+categories: expo/modules
+published: false
 ---
 
 #### 결론
