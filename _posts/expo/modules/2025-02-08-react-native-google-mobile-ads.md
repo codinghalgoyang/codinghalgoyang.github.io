@@ -2,7 +2,6 @@
 layout: single
 title: "[expo/modules] google admob"
 categories: expo/modules
-published: false
 ---
 
 ## 구글 애드몹
@@ -153,11 +152,13 @@ export default function Index() {
       <BannerAd
         unitId={adUnitId}
         size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+        {% raw %}
         requestOptions={{
           networkExtras: {
             collapsible: "bottom",
           },
         }}
+        {% endraw %}
       />
     </View>
   );
