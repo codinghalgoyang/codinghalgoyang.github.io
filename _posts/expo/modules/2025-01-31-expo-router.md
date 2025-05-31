@@ -2,7 +2,6 @@
 layout: single
 title: "[expo/modules] expo-router"
 categories: expo/modules
-published: false
 ---
 
 파일 기반 라우터 expo-router 사용하기
